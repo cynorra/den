@@ -1,0 +1,5 @@
+fetch(
+  'https://wax.api.atomicassets.io/atomicassets/v1/assets?owner=jmfb2.wam&page=1&limit=100&order=desc&sort=asset_id'
+)
+  .then(response => response.json())
+  .then(data => console.log(data.data[0].template.immutable_data.name));
